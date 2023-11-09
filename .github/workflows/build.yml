@@ -56,8 +56,8 @@ jobs:
         name: artifacts
     - name: Deploy to Sandbox
       env:      
-        ID: ${{ secrets.CONNECTED_APP_CLIENT_ID }}
-        SECRET: ${{ secrets.CONNECTED_APP_CLIENT_SECRET }}
+        ID: ${{ secrets.anypoint_platform_username }}
+        SECRET: ${{ secrets.anypoint_platform_password }}
         ENV: ${{secrets.ENV}}
       run: |
         artifactName=$(ls *.jar | head -1)
